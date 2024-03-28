@@ -2,6 +2,8 @@
     display: flex;
     justify-content: flex-end;
     margin: 20px;
+    cursor: pointer;
+    padding: 5px;
 }
 
 .nav-section{
@@ -37,3 +39,18 @@ input:focus {
     position: relative;
     left: 20px;
     color: #5F6368;}
+
+.product-card{
+    display:flex ;
+    flex-direction: column;
+}
+
+.product-card :hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.product-img{
+    display: flex;
+    justify-content: flex-end ;
+}
