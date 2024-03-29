@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
-import { Container, Row ,Col} from 'react-bootstrap'
+import { Container, Row ,Col, Form, Button } from 'react-bootstrap'
 
 const ProductDetail = () => {
   let {id}=useParams()
@@ -16,16 +16,22 @@ const ProductDetail = () => {
     getProductDetail()
   },[])
   return (
-    <Container className="product-detail">
+    <Container>
       <Row>
-        <Col>
-          <img width={400} src={product?.img}/>
+        <Col lg={6} sm={12}>
+          <img className="product-img" src={product?.img}/>
         </Col>
         <Col>
-          <div>{product?.title}</div>
-          <div>₩{product?.price}</div>
-          <div>{product?.choice == true?"Conscious choice" : ""}</div>
-          <div>{product?.size}</div>
+          <h1>{product?.title}</h1>
+          <h2>₩{product?.price}</h2>
+        <Form.Select className="product-size" aria-label="Default select example">
+          <option disabled>Size</option>
+          {product?.size.map(i => 
+          <option value={i} key={i}>{i}</option>)}
+        </Form.Select>
+          <div>
+            <Button variant="danger" type="submit">구매하기</Button>
+          </div>
         </Col>
       </Row>
     
@@ -34,3 +40,4 @@ const ProductDetail = () => {
 }
 
 export default ProductDetail
+
