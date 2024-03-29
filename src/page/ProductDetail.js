@@ -16,10 +16,10 @@ const ProductDetail = () => {
     getProductDetail()
   },[])
   return (
-    <Container>
+    <Container className="product-detail">
       <Row>
-        <Col className="product-img">
-          <img src={product?.img}/>
+        <Col>
+          <img width={400} src={product?.img}/>
         </Col>
         <Col>
           <div>{product?.title}</div>

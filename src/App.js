@@ -8,6 +8,7 @@ import Navbar from './component/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
+import { Container } from 'react-bootstrap'
 
 //1. 전체 상품페이지, 로그인, 상품 상세페이지
 //1-1. 네비게이션 바
@@ -26,7 +27,7 @@ function App() {
     console.log("aaa",authenticate)
   },[authenticate])
   return (
-    <div>
+    <Container>
       <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll/>}/>
@@ -34,7 +35,7 @@ function App() {
         <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>
 
-    </div>
+    </Container>
   );
 }
 

@@ -24,7 +24,7 @@ const Navbar = () => {
     <div>
       <div>
         <div className="login-button" onClick={goToLogin}>
-          <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon icon={faUser} className="user-button"/>
           <div>로그인</div>
         </div>
       </div>
@@ -40,12 +40,12 @@ const Navbar = () => {
             <li>{menu}</li>
           ))}
         </ul>
-
-        <div>
+      </div>
+        <div className="search-wrap">
           <FontAwesomeIcon icon={faSearch} className="search-icon" />
           <input type="text" placeholder="Search" class="input-box" />
         </div>
-      </div>
+      
     </div>
   );
 };
