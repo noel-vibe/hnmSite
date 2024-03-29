@@ -19,6 +19,9 @@ const Navbar = () => {
   const goToLogin=()=>{
     navigate("/login")
   }
+  const goToMain=()=>{
+    navigate("/")
+  }
 
   return (
     <div>
@@ -30,9 +33,10 @@ const Navbar = () => {
       </div>
       <div className="nav-section">
         <img
-          width={100}
+          width={100} className="logo"
           src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmPpwY%2FbtrS08qGYmD%2FHMrVGbYtNNpxynW3i53Zy1%2Fimg.png"
-        />
+          onClick={goToMain}
+       />
       </div>
       <div className="menu-area">
         <ul className="menu-list">

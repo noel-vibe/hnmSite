@@ -23,7 +23,9 @@ const ProductDetail = () => {
         </Col>
         <Col>
           <div>{product?.title}</div>
-          <div>{product?.price}</div>
+          <div>₩{product?.price}</div>
+          <div>{product?.choice == true?"Conscious choice" : ""}</div>
+          <div>{product?.size}</div>
         </Col>
       </Row>
     

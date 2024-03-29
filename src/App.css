@@ -3,6 +3,9 @@ body{
     justify-content: center;
 }
 
+.logo{
+    cursor: pointer;
+}
 .login-button{
     display: flex;
     justify-content: flex-end;
