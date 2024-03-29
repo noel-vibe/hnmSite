@@ -27,7 +27,7 @@ function App() {
     console.log("aaa",authenticate)
   },[authenticate])
   return (
-    <Container>
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll/>}/>
@@ -35,7 +35,7 @@ function App() {
         <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>
 
-    </Container>
+    </div>
   );
 }
 
